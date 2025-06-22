@@ -70,7 +70,7 @@ function Canvas() {
       ctx.strokeStyle = GOLD;
     }
 
-    let mousePosition = {
+    const mousePosition = {
       x: (30 * displayWidth) / 100,
       y: (30 * displayHeight) / 100,
     };
@@ -103,6 +103,15 @@ function Canvas() {
       this.radius = Math.random() * 1.5;
       this.colour = colorDot[Math.floor(Math.random() * colorDot.length)];
     }
+
+    // Add this constructor type to fix the "any" type error
+    interface DotConstructor {
+      new(): Dot;
+      prototype: Dot;
+    }
+
+    // Cast Dot to a proper constructor type
+    const DotConstructor = Dot as unknown as DotConstructor;
 
     Dot.prototype = {
       create: function () {
@@ -138,7 +147,7 @@ function Canvas() {
         ctx.clearRect(0, 0, displayWidth, displayHeight);
       }
       for (let i = 0; i < dots.nb; i++) {
-        dots.array.push(new (Dot as any)() as Dot);
+        dots.array.push(new DotConstructor());
         const dot = dots.array[i];
         dot.create();
       }

@@ -1,5 +1,5 @@
 "use client";
-import { MediaItem, ProjectData, ProjectLink } from "@/lib/ProjectsHelper";
+import { ProjectData, ProjectLink } from "@/lib/ProjectsHelper";
 import {
   Dialog,
   DialogContent,
@@ -10,7 +10,6 @@ import {
   Button,
   useTheme,
   alpha,
-  useMediaQuery,
 } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 import GitHubIcon from "@mui/icons-material/GitHub";
@@ -27,8 +26,6 @@ interface ProjectDetailDialogProps {
 
 const ProjectDetailDialog = ({ project, open, onClose }: ProjectDetailDialogProps) => {
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
-  const isTablet = useMediaQuery(theme.breakpoints.down("md"));
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   
   if (!project) return null;

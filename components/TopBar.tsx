@@ -13,13 +13,11 @@ import MenuIcon from "@mui/icons-material/Menu";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import Email from "@mui/icons-material/Email";
-import { useMediaQuery } from "@mui/material";
 import { smoothScroll } from "@/lib/util";
 
 const pages = ["Home", "Projects", "Experience", "Connect"];
 
 function TopBar() {
-  const isMobile = useMediaQuery("(max-width:600px)");
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
   const [isSticky, setIsSticky] = React.useState(false);
   const topBarRef = React.useRef<HTMLDivElement>(null);

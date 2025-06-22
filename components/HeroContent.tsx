@@ -68,7 +68,7 @@ import {
                         WebkitTextFillColor: 'transparent',
                       }}
                     >
-                      Hi! I'm Jaskirat Gill
+                      Hi! I&apos;m Jaskirat Gill
                     </Typography>
                     <Typography 
                       variant="h3" 
@@ -147,7 +147,7 @@ import {
                       { icon: GitHubIcon, href: "https://github.com/jaskirat-gill", label: "GitHub" },
                       { icon: LinkedInIcon, href: "https://www.linkedin.com/in/jaskirat-s-gill/", label: "LinkedIn" },
                       { icon: Email, href: "mailto:gilljaskirat04@gmail.com", label: "Email" }
-                    ].map(({ icon: Icon, href, label }, index) => (
+                    ].map(({ icon: Icon, href, label }) => (
                       <Button 
                         key={label}
                         href={href} 

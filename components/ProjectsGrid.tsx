@@ -1,13 +1,12 @@
 "use client";
 import { ProjectData, ProjectsData } from "@/lib/ProjectsHelper";
-import { Box, Grid, Typography, alpha, useMediaQuery, useTheme } from "@mui/material";
+import { Box, Grid, Typography, useMediaQuery } from "@mui/material";
 import ProjectCard from "./ProjectCard";
-import { useEffect, useMemo, useState } from "react";
+import { useState } from "react";
 import ProjectDetailDialog from "./ProjectDetailDialog";
 import { Grow } from "@mui/material";
 
 const ProjectsGrid = () => {
-  const theme = useTheme();
   const isMobile = useMediaQuery("(max-width:600px)");
   const isTablet = useMediaQuery("(max-width:900px)");
   const [selectedProject, setSelectedProject] = useState<ProjectData | null>(null);

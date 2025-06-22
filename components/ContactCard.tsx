@@ -1,5 +1,5 @@
 "use client";
-import { Card, CardContent, Link, Typography, useMediaQuery, Box, IconButton } from "@mui/material";
+import { Card, CardContent, Typography, useMediaQuery, Box, IconButton } from "@mui/material";
 import { Email, LinkedIn, GitHub, Launch } from "@mui/icons-material";
 import { useState } from "react";
 
@@ -110,7 +110,7 @@ const ContactCard = () => {
             },
           }}
         >
-          Let's Connect
+          Let&apos;s Connect
         </Typography>
 
         <Box

@@ -42,7 +42,7 @@ function HeroCanvas() {
       ctx.strokeStyle = GOLD;
     }
 
-    let mousePosition = {
+    const mousePosition = {
       x: (30 * canvas.width) / 100,
       y: (30 * canvas.height) / 100,
     };
@@ -72,6 +72,14 @@ function HeroCanvas() {
       this.radius = Math.random() * 1.5;
       this.colour = colorDot[Math.floor(Math.random() * colorDot.length)];
     }
+
+    interface DotConstructor {
+      new(): Dot;
+      prototype: Dot;
+    }
+
+    // Cast Dot to a proper constructor type
+    const DotConstructor = Dot as unknown as DotConstructor;
 
     Dot.prototype = {
       create: function () {
@@ -144,7 +152,7 @@ function HeroCanvas() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
       }
       for (let i = 0; i < dots.nb; i++) {
-        dots.array.push(new (Dot as any)() as Dot);
+        dots.array.push(new DotConstructor());
         const dot = dots.array[i];
         dot.create();
       }
