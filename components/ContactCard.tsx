@@ -231,18 +231,6 @@ const ContactCard = () => {
           ))}
         </Box>
 
-        <Typography
-          variant="body2"
-          sx={{
-            textAlign: "center",
-            marginTop: "2rem",
-            color: "rgba(255, 255, 255, 0.6)",
-            fontSize: "0.9rem",
-            fontStyle: "italic",
-          }}
-        >
-          Always open to new opportunities and collaborations
-        </Typography>
       </Card>
     </Box>
   );

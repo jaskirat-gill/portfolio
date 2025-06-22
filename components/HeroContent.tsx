@@ -87,7 +87,7 @@ import {
                     <Box sx={{ display: 'flex', justifyContent: 'center', mb: 3 }}>
                       <Avatar
                         alt="Jaskirat Gill"
-                        src="https://i.imgur.com/SRAp1bt.jpeg"
+                        src="https://i.imgur.com/x4KHP4R.jpeg"
                         sx={{
                           width: "120px",
                           height: "120px",
@@ -186,7 +186,7 @@ import {
                 {!isMobile && (
                   <Avatar
                     alt="Jaskirat Gill"
-                    src="https://i.imgur.com/SRAp1bt.jpeg"
+                    src="https://i.imgur.com/x4KHP4R.jpeg"
                     sx={{ 
                       width: "250px", 
                       height: "250px", 
