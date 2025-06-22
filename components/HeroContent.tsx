@@ -79,7 +79,7 @@ import {
                         opacity: 0.9,
                       }}
                     >
-                      Software Developer
+                      Software Engineer
                     </Typography>
                   </Box>
 
@@ -107,8 +107,7 @@ import {
                       opacity: 0.9,
                     }}
                   >
-                    Computer Science Major at UBC aspiring to be a Software
-                    Developer. Interested in full stack development, machine
+                    Computer Science Major at UBC. Experience as a Software Engineer at United Health Group & Golf918. Interested in full stack development, machine
                     learning, and more! Feel free to check out my resume and connect
                     with me on LinkedIn or any of the links below!
                   </Typography>
